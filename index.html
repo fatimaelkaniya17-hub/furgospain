@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FurgoSpain - Alquiler de Furgonetas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Open Sans', sans-serif; background:#f4f4f4; color: #111; }
+
+    /* Header */
+    header { background-color: #3BACDD; color: white; text-align: center; padding: 80px 20px 60px; position: relative; }
+    header img { max-height: 100px; margin-bottom: 20px; display:block; margin-left:auto; margin-right:auto; }
+    header p { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px; font-style: italic; }
+    .intro { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px; }
+    .btn-header { background-color: #000000; color: #ffffff; padding: 12px 30px; text-decoration:none; border-radius: 30px; font-weight:bold; transition:0.3s; }
+    .btn-header:hover { background-color: #333333; }
+
+    /* Secciones */
+    section { padding: 60px 20px; text-align: center; }
+    section h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 30px; color: #3BACDD; }
+
+    /* Furgonetas */
+    .furgos { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .furgos img { width: 280px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.3s; }
+    .furgos img:hover { transform: scale(1.05); }
+    
+    .furgo-grande { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; }
+    .furgo-grande img { width:280px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition: transform 0.3s; }
+    .furgo-grande img:hover { transform: scale(1.05); }
+
+    /* Formulario */
+    form { max-width: 500px; margin: 0 auto; text-align: left; }
+    form input, form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border:1px solid #ccc; font-size:1rem; font-family: 'Open Sans', sans-serif; }
+    form input[type="submit"] { background-color: #3BACDD; color:white; border:none; font-weight:bold; cursor:pointer; transition:0.3s; }
+    form input[type="submit"]:hover { background-color: #2E95C0; }
+
+    /* Footer */
+    footer { background-color: #111; color: white; text-align:center; padding:30px 20px; }
+    footer a { color: #3BACDD; text-decoration:none; font-weight:bold; }
+
+    /* Responsive */
+    @media(max-width:600px){ 
+      .furgos, .furgo-grande { flex-direction: column; align-items: center; } 
+      .furgo-grande img { width:80%; max-width:300px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Logo.jpg" alt="FurgoSpain Logo">
+  <p>“Alquila tu furgoneta y haz tu transporte más fácil”</p>
+  <div class="intro">
+    Bienvenido a FurgoSpain, tu aliado en alquiler de furgonetas en Alicante. 
+    Disfruta de la comodidad y libertad de moverte con facilidad, eligiendo la furgoneta que mejor se adapte a tus necesidades. Reserva de forma rápida y sencilla.
+  </div>
+  <a href="https://wa.me/34635175527" class="btn-header">Reserva por WhatsApp</a>
+</header>
+
+<section id="servicios">
+  <h2>Nuestras Furgonetas</h2>
+  <div class="furgos">
+    <img src="furgo1.jpeg" alt="Furgo pequeña">
+    <img src="furgo2.png" alt="Furgo mediana">
+    
+    <!-- Furgo Grande con dos fotos del mismo tamaño -->
+    <div class="furgo-grande">
+      <img src="furgo3_cerrada.jpg" alt="Furgo grande cerrada">
+      <img src="furgo3_abierta.png" alt="Furgo grande abierta">
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <form action="mailto:info@furgospain.com" method="post" enctype="text/plain">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <label>Mensaje:</label>
+    <textarea name="mensaje" rows="5" required></textarea>
+    <input type="submit" value="Enviar">
+  </form>
+  <p>O contáctanos por WhatsApp: <a href="https://wa.me/34635175527">+34 635 175 527</a></p>
+</section>
+
+<footer>
+  &copy; 2026 FurgoSpain - Email: <a href="mailto:info@furgospain.com">info@furgospain.com</a> | WhatsApp: <a href="https://wa.me/34635175527">+34 635 175 527</a>
+</footer>
+
+</body>
+</html>
